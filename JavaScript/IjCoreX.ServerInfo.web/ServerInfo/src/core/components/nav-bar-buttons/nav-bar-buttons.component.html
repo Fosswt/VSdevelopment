@@ -1,0 +1,12 @@
+<div style="width: 100px; height: 2.8rem;">
+    <button id="b1" class="icon-btn"(click)="toggleFullscreen()"><fa-icon [icon]="faExpand"></fa-icon></button>
+    <button (click)="toggle()" id="b2" class="icon-btn"><fa-icon [icon]="faBars"></fa-icon></button>
+    <ng-container *ngIf="mostrar">
+        <div class="modal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ex, esse neque porro tempore voluptatem iste aspernatur enim quaerat eius. Velit adipisci odio delectus laborum, porro provident harum maiores dignissimos!
+        <ng-content></ng-content>
+    </div>
+    <div (click)="toggle()" class="overlay"></div>
+    </ng-container>
+    
+</div>

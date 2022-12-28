@@ -1,0 +1,50 @@
+.f-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: .5rem 1rem;
+}
+
+.f-form-row{
+    width: 100%;
+    display: flex;
+}
+.f-form-row .f-form-field:not(:last-child),
+.f-form-row .f-form-field-reverse:not(:last-child){
+    margin-right: .7rem;
+}
+
+.f-form-field,
+.f-form-field-reverse{
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.f-form-field-reverse{
+    display: inline-flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+
+.f-form-field > label,
+.f-form-field-reverse > label{
+    width: 100%;   
+    margin-bottom: .2rem;
+}
+.f-form-field > input,
+.f-form-field-reverse > input{
+    width: 100%;   
+    height: 2rem;
+}
+
+.f-form-field input:focus + label,
+.f-form-field-reverse input:focus + label {
+    font-weight: bold;
+}
+
+.f-form-invalid[aria-invalid="true"]{
+    border: 1px solid rgba(201, 24, 1,.9);
+}

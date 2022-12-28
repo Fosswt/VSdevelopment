@@ -1,0 +1,27 @@
+<h2>All Faurecia Plants: </h2>
+<table>
+    <tr>
+        <th>Plant_Name</th>
+        <th>Alias</th>
+        <th>Active</th>
+        <th>Edit</th>
+    </tr>
+    <tr *ngFor="let planta of dados">
+        <td>
+            {{planta.Name}}
+        </td>
+        <td>
+            {{planta.Alias}}
+        </td>
+        <td>
+            {{planta.Active}}
+        </td>
+        <td>
+            <button class="edita" (click)="editar(planta.Id)">edit</button>
+        </td>
+    </tr>
+
+</table>
+<button (click)="sendGetRequest()">pegaDados</button>
+<button (click)="joinha()">👍</button>
+

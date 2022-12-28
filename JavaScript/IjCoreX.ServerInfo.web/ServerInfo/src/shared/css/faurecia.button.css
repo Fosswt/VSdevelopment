@@ -1,0 +1,42 @@
+/*COLORS*/
+.p-button,
+.icon-btn{
+    background: rgba(0, 65, 204,.9) !important;
+    border-color: #0040CB !important;
+}
+
+.p-button-success,
+.icon-btn-success{
+    background: rgba(2, 152, 16,.9) !important;
+    border-color: #029810 !important;
+}
+
+.p-button-warning,
+.icon-btn-warning{
+    background: rgba(255, 198, 0,.9) !important;
+    border-color: #FFC600 !important;
+}
+
+.p-button-danger,
+.icon-btn-danger{
+    background: rgba(201, 24, 1,.9) !important;
+    border-color: #C91801 !important;
+}
+
+.icon-btn,
+.icon-btn-success,
+.icon-btn-warning,
+.icon-btn-danger{
+    padding: .5rem .7rem !important;
+    border-radius: .2rem;
+    border-width: 1px;
+    color: white;
+}
+.icon-btn:hover,
+.icon-btn-success:hover,
+.icon-btn-warning:hover,
+.icon-btn-danger:hover{
+    opacity: .8;
+    cursor: pointer;
+}
+

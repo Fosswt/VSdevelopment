@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sistema de Multas DetranPR</h1>
+    Velocidade do carro: 
+    <input type="number" name="VELOCIDADE" id="velocity"> Km/h
+    <input onclick="multar()" type="button" value="Verificar">
+    <div id="div"></div>
+    <script>
+        function multar(){
+
+            var txt = window.document.getElementById("velocity")
+            var res = Number(txt.value) 
+            var div = window.document.getElementById('div')
+            div.innerHTML = 'Sua velocidade é de '+res+' KM/H';
+            if(res > 80){
+                div.innerHTML = 'Você foi multado!'
+            }
+            else if(res < 80){
+                div.innerHTML = 'Continue assim!'
+                div.innerHTML += 'Não se esqueça do cinto de segurança!'
+            }
+            else{
+                div.innerHTML = 'Velocidade inválida!!!'
+            }
+        }
+    </script>
+</body>
+</html>

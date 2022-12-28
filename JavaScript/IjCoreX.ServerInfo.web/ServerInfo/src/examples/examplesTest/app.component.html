@@ -1,0 +1,10 @@
+
+<label>Mostrar/Esconder TestComponent</label>
+<input type="checkbox" [(ngModel)] ="checked">
+<br>
+<app-teste *ngIf="checked"></app-teste>
+<br>
+<butao [titulo]=" '22 Confirma' " (pressionado)="alerta($event)"></butao>
+<br>
+<butao></butao>
+<input type="text" [ngClass] = "{'azul': false}" >

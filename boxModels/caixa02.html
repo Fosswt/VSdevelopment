@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: beige;
+            background-image: linear-gradient(black, green);
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1px;
+            margin: 0px;
+            border-radius: 10px;
+        }
+        article{
+            background-color: lightgray;
+            border-radius: 10px;
+            box-shadow: 4px 4px 0px 0px rgb(0 0 0 / 50%);
+        }
+        article>aside{
+            background-color: rgb(160, 184, 184);
+            border-radius: 20px;
+        }
+        nav{
+            background-color: lightcoral;
+            padding: 3px;
+
+        }
+        nav>a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        nav > a:hover{
+            text-decoration: dotted;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+
+        </section>
+        <section id="noticias">
+            <article >
+                <h2>Notícias Urgentes sobre o Brasil</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, fuga aliquid ipsa repudiandae tempore sapiente ipsam? Unde sunt tempora impedit deleniti, quis culpa repellendus voluptatibus a ut voluptate alias sed?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consequatur error consequuntur placeat, maiores provident similique exercitationem dolor aliquam eum nulla maxime quos blanditiis ratione numquam porro quisquam praesentium odit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consequatur error consequuntur placeat, maiores provident similique exercitationem dolor aliquam eum nulla maxime quos blanditiis ratione numquam porro quisquam praese
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consequatur error consequuntur placeat, maiores provident similique exercitationem dolor aliquam eum nulla maxime quos blanditiis ratione numquam porro quisquam praese
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, consequatur error consequuntur placeat, maiores provident similique exercitationem dolor aliquam eum nulla maxime quos blanditiis ratione numquam porro quisquam praese
+                            
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo Vinicius</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+span{
+    font-size: 1.5rem; 
+    color: #FA0057;
+    font-family: "Segoe Print";
+    text-align: center;
+}
+span:hover{
+    cursor: pointer;
+}
+#si{
+    font-family: "Neuropol X Free";
+    color: #003684;
+    font-size: 2rem;
+}

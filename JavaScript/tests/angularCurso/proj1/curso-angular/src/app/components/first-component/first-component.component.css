@@ -1,0 +1,14 @@
+h2{
+    color: aqua;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    color: red;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+h1{
+    color: green;
+}

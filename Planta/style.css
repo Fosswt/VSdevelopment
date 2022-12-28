@@ -1,0 +1,212 @@
+#PName{
+    margin-left: 20px;
+}
+#PAlias{
+    margin-left: 25px;
+}
+#PActive{
+    margin-left: 16px;
+}
+#caixa01{
+    margin-left: 10px;
+    display: inline;
+    height: 45px;
+}
+#caixa02{
+    margin: auto;
+    display: inline;
+    text-align: center;
+    height: 45px;  
+}
+#caixaSuperior{
+    display: flex;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.178);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    height: 55pxpx;
+    
+}
+fieldset{
+    margin-top: 40px;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 95px;
+    margin-right: 95px;
+}
+#p1{
+    color: blue;
+    font-size: 35px;
+    display: inline;
+}
+#p2{   
+    display: inline;
+    color: red;
+    font-size: 30px;
+    font-family: cursive
+}
+#p3{
+    display: inline;
+    color: blue;
+    font-size: 25px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    text-align: center;
+}
+#buttonSAO{
+    border-color: white;
+    font-family: cursive;
+    color: red;
+    width: 80px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.171);
+}
+#buttonExpand{
+    border-color: white;
+    margin-right: 10px;
+    background-color: blue;
+    color: white;
+}
+#buttonInfo{
+    border-color: white;
+    margin-right: 30px;
+    background-color: blue;
+    color: white;
+}
+#buttonSubmit{
+    width: 100px;
+    border-radius: 15px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-color: white;
+    margin-left: 1%;
+}
+#buttonSubmit:hover{
+    background-color: rgb(41, 87, 255);
+    cursor: pointer;
+}
+#buttonSubmit:active{
+    background-color: red;
+}
+div#resultadoBD{
+    margin: auto;
+    text-align: justify;
+    margin-top: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+div#resultadoTabela{
+    margin: auto;
+    text-align: justify;
+    margin-top: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 75%;
+}
+table {
+    border: 1px #5e5757 solid;
+    width: 100%;   
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.247);
+    border-collapse: collapse;
+    
+  }
+  table th {
+    background-color: #00f;
+    color: #fff;    
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    height: 35px;
+  }
+
+  table td {
+    background-color: #f0f0f0;
+    color: #0c0c0c;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35px;
+    text-align: center;
+  }
+  table th:hover{
+    background-color: rgb(44, 41, 255);
+    
+  }
+#resultadoBD{    
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+td:hover{
+    color: rgb(0, 0, 0);
+    background-color: #e9e1e1;
+    
+}
+footer{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    margin-top: 0%;
+    font-style: italic;
+}
+button#delete{
+    width: 100px;
+    border-radius: 15px;
+    height: 30px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-color: white;
+}
+#atualiza:hover{
+    background-color: rgb(41, 87, 255);
+}
+#delete:hover{
+    background-color: rgba(255, 0, 0, 0.76);
+    cursor: pointer;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgb(255, 0, 0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* Add Animation */
+#edits{
+    cursor: pointer;
+}

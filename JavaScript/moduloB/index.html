@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><i>Testando a fonte itálica</i></h1>
+    <script>
+        window.alert("Esse Script nos retorna a soma entre dois números.")
+        let num1 = Number.parseFloat(window.prompt("Digite o primeiro número.")) //tá recebendo um valor string, devemos converter
+        let num2 = Number.parseFloat(window.prompt("Digite o primeiro número."))  
+        //window.alert("A soma entre {0} e {1} é {2}"num1 num2, num1+num2)
+        let result = num1 + num2
+        window.confirm('Utilizando Concatenação Normal')
+        window.alert("A soma entre "+num1+" e "+num2+" é igual a "+result)
+        //utilizando templateString
+        window.confirm('Utilizando TemplateString')
+        window.alert(`A soma entre ${num1} e ${num2} é ${num1+num2}`)
+        //concatenação de strings =>
+        let nome = 'Vinicius'
+        let sobreNome = 'Foss'
+        let idade = 19
+        let curso = 'Ciência da Computação'
+        let universidade = 'Pontifícia Universidade Católica do Paraná'
+        let hist = `Bom dia, meu nome é ${nome} ${sobreNome}, tenho ${idade} anos e estou cursando ${curso} na ${universidade}.`// aqui utilizamos crase
+        window.alert(hist)
+        let caps = window.prompt('Escreva qualquer coisa que irei retornar tudo em CAPS LOCK!')
+        window.alert('só para avisar, o que você inseriu tem exatamente '+caps.length+' caracteres.')
+        window.alert(caps.toUpperCase())
+        window.alert(caps.italics())
+        
+    </script>
+</body>
+</html>

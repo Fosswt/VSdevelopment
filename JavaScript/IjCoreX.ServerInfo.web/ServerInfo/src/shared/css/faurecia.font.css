@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Neuropol';
+    src: url('../../assets/font/Neuropol.woff2') format('woff2'),
+        url('../../assets/font/Neuropol.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neuropol X Free';
+    src: url('../../assets/font/NeuropolXFree.woff2') format('woff2'),
+        url('../../assets/font/NeuropolXFree.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Century Gothic';
+    src: url('../../assets/font/CenturyGothic.woff2') format('woff2'),
+        url('../../assets/font/CenturyGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'Segoe Print';
+    src: url('../../assets/font/SegoePrint.woff2') format('woff2'),
+        url('../../assets/font/SegoePrint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-neuropol-x{
+    font-family: 'Neuropol X Free';
+}
+.font-segoe-print{
+    font-family: 'Segoe Print';
+}

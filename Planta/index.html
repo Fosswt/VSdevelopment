@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous">
+</script>
+    
+</head>
+<body onload="pegaDadoDB()">
+    <div id="caixaSuperior">
+        <div id="caixa01">
+            <p id="p1">IJcore</p>
+        </div>
+        <div id = "caixa02" style="display: inline-block;">
+            <p id="p2">IT Plant</p>
+            <p id="p3">Tour</p>
+        </div>
+        <button id="buttonSAO">SAO</button>
+        <button id="buttonExpand">Expand</button>
+        <button id="buttonInfo">Info</button>
+    </div>
+    <h1>Application: ServerInfo</h1>
+    <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+    color: red;">Adicionar método UPDATE</h2>
+        <form onsubmit= "return false" id="formulario">
+            <fieldset id="field">
+                <legend>ServerInfo: Plant</legend>
+                <p>
+                    Name <input type="text" name="name" id="PName">
+                </p>
+                <p>
+                    Alias <input type="text" name="alias" id="PAlias">
+                </p>
+                <p>
+                    Active <input type="checkbox" name="active" id="PActive">
+                </p>
+                <!-- <button id="buttonSubmit" onclick="submit()">Submit</button>   -->
+                <input id="buttonSubmit" type="submit" value="Submit" onclick="enviar()">
+                <button id="delete" onclick="deletar()">Delete</button>  
+
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn">Open Modal</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                 <!-- Modal content -->
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+                </div>
+
+                </div>          
+            </fieldset>
+            <div id="resultadoTabela">
+                <table id="tabelinha" border="1">  
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Alias</th>
+                        <th>Active</th>
+                        <th>Edit</th>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="resultadoBD">
+
+            </div>
+        </form>
+        <div id="root"></div>
+      <footer>
+        
+      </footer>
+      <script>
+
+        function pegaDadoDB(){
+            let res = document.getElementById("resultadoBD")
+            $.get("http://localhost:57400/api/plant", function(data, status){
+            console.log("Nome: "+data[1].Name)
+            console.log("Alias: "+data[1].Alias) // acessando o campo ALIAS da segunda planta ativa;
+            console.log("Ativo: "+data[1].Active)
+            console.log(data)
+
+            console.log(data.length)      
+            res.innerHTML = ""     
+            let caixa = document.getElementById("tabelinha")
+            for (i = 0; i < data.length; i ++){               
+                if(data[i].Active){
+                    caixa.innerHTML += `<tr><td>${data[i].Id}</td><td>${data[i].Name}</td><td>${data[i].Alias}</td><td>🟢</td><td id="edits"  onclick="editar(${data[i].Id})">✏️</td></tr>`
+                }
+                else{
+                    caixa.innerHTML += `<tr><td>${data[i].Id}</td><td>${data[i].Name}</td><td>${data[i].Alias}</td><td>🔴</td><td id="edits" onclick="editar(${data[i].Id})">✏️</td></tr>`
+                }
+            }
+        });                     
+    }
+        function enviar(){
+            let campoName = document.getElementById("PName").value
+            let campoAlias = document.getElementById("PAlias").value
+            let campoActive = document.getElementById("PActive").checked
+            
+            
+            if(campoName == "" || campoName == null){
+                // alert("Campo Name não pode ser vazio!")
+                return false;
+            }
+            else if(campoAlias == "" || campoAlias == null){
+                // alert("Campo Alias não pode ser vazio!")
+                return false;
+            }
+            $.ajax({ //enviando dados para o servidor.
+                method: "POST",
+                url: "http://localhost:57400/api/plant",
+                data: JSON.stringify({
+                    Name: campoName,
+                    Alias: campoAlias,
+                    Active: campoActive
+                }),
+                success: alert("Dados enviados com sucesso!"),
+                beforeSend: function(){
+                    $("#resultado").html("ENVIANDO...");
+                },
+                contentType: "application/json",
+                dataType: 'json',               
+            })            
+} 
+//fazer DELETE e UPDATE now
+            function deletar(){
+                let id = Number(window.prompt("Informe o ID da PLANTA que deseja deletar"))
+                $.ajax({
+                    url: `http://localhost:57400/api/plant/delete/${id}`,
+                    type: 'DELETE',
+                    contentType: "application/json",
+                    success: alert("Planta deletada com sucesso!")                   
+                })
+            }
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            
+            function editar(id){
+                let campoName = (window.prompt("Informe o NAME da PLANTA"))
+                let campoAlias = (window.prompt("Informe o ALIAS da PLANTA"))
+                let campoActive = Boolean(window.prompt("Informe o ACTIVE da PLANTA\n(1 para TRUE e 0 para FALSE)"))
+                if(id == 0){
+                    alert("ERROR_ID_0")
+                    return false
+                }
+                else if(campoName == "" || campoName == null){
+                    alert("Campo Name não pode ser vazio!")
+                    return false;
+                }
+                else if(campoAlias == "" || campoAlias == null){
+                    alert("Campo Alias não pode ser vazio!")
+                    return false; //???
+                }
+                $.ajax({
+                    url: 'http://localhost:57400/api/plant',
+                    method: 'PUT',
+                    data: JSON.stringify({
+                        Id: id,
+                        Name: campoName,
+                        Alias: campoAlias,
+                        Active: campoName
+                    }),
+                    beforeSend: function(){
+                        $("#resultado").html("ENVIANDO...");
+                    },
+                    contentType: "application/json",
+                    dataType: 'json',
+                    success: alert("Planta atualizada com sucesso!")                    
+                })
+            }
+
+
+//fazer conexão com a api
+//         fetch("http://localhost:57400/api/plant").then(resposta=>{
+//         resposta.json().then(json=>{
+//         console.log(json)
+//     })
+//     }).catch(erro=>{
+//      console.log(erro)
+// })
+
+
+      </script>
+      <footer>
+        Copyright &copy; Vinicius Foss
+      </footer>
+</body>
+</html>

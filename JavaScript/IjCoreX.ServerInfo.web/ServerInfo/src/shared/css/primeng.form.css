@@ -1,0 +1,6 @@
+.inpswitch-success > .p-inputswitch-slider {
+    background: #C91801 !important; 
+}
+.inpswitch-success.p-inputswitch-checked > .p-inputswitch-slider {
+    background: #029810 !important; 
+}

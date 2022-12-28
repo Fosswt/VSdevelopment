@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        
+        button{
+            background: rgb(61, 247, 117);
+            color: white;
+            font: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 35px;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: auto;
+        }
+        div#butao{
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="butao">
+        <button id="area" onclick="clicar()" onmouseenter="entrou()" onmouseleave="saiu()" onmousedown="segurou()" onmouseup="soltou()">
+            Interaja...
+        </button>    
+    </div>
+
+    <script>
+        //MOUSEENTER
+        //MOUSEOUT
+        //MOUSEDOWN, MOUSEUP
+        //MOUSEMOVE
+        //CLICK
+        function clicar(){
+            let a = window.document.getElementById('area')
+            a.innerText = 'vc clickou!'
+            a.style.background = 'red'
+            a.style.color = 'white'
+        }
+        function entrou(){
+            let a = window.document.getElementById('area')
+            a.innerText = 'mouse-in!'
+            a.style.color = 'white'
+        }
+        function saiu(){
+            let a = window.document.getElementById('area')
+            a.innerText = 'mouse-out!'
+            a.style.background = 'rgb(61, 247, 117)';
+            a.style.color = 'white'
+        }
+        function segurou(){
+            let a = window.document.getElementById('area')
+            a.innerText = 'segurou!'
+            a.style.background = 'yellow'
+            a.style.color = 'red'
+        }
+        function soltou(){
+            let a = window.document.getElementById('area')
+            a.innerText = 'soltou!'           
+        }
+    </script>
+</body>
+</html>

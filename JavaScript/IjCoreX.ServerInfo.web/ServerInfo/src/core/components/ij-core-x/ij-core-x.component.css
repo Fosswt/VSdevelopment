@@ -1,0 +1,24 @@
+.i{
+    font-family: "Neuropol X Free";
+    background-image: linear-gradient(to bottom,#fa0057 38%,#ffffff 32%,#ffffff 35%,#003684 33%)!important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 14px;
+}
+.ijcore{
+    font-family: "Neuropol X Free";
+    color: #003684;  
+}
+.x{
+    font-family: "Segoe Print";
+    
+    color: #FA0057;
+    font-size: small;
+}
+span{
+    font-size: 2rem;
+}
+span:hover{
+    cursor: pointer;
+}

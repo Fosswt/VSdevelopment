@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+h1{
+    background-color: white;
+    margin: auto;
+    color: #fa0057;
+    font-family: cursive;
+    font-weight: 300;
+    font-size: 1cm;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    box-shadow: 1px 2px 5px #0000004d;
+    border-radius:7px;
+    cursor: pointer;
+    font-size: 25px;
+}
+body{
+    background-image: linear-gradient(white, rgb(124, 124, 211));
+}
+p{
+    color: green;
+    font-size: 15px;
+}

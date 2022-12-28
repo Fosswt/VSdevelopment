@@ -1,0 +1,44 @@
+button{
+    width: 90px;
+    height: 40px;
+    color: white;
+    background-color: rgb(29, 182, 16);
+    border-radius: 5px;   
+    margin-right: 5%;
+    font-size: larger;
+    font-weight: bold;
+    float: right;
+    margin-top: 35px;
+    border: black;
+    word-spacing: 5px;
+}
+button:hover{
+    background-color: rgba(30, 182, 16, 0.808);
+    cursor: pointer;
+}
+.modal{
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #333;
+    min-width: 500px;
+    width: 60%;
+    height: 50%;
+    position: fixed;
+    left: 50%;
+    padding: 24px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+.overlay{
+    background: #000;
+    height: 100vh;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+}
+
+

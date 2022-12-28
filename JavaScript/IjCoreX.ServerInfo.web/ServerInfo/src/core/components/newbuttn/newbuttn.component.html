@@ -1,0 +1,9 @@
+
+    <button (click)="toggle()">New &plus;</button>
+    <ng-container *ngIf="mostrar">
+        <div class="modal">
+            <app-create-plant></app-create-plant>
+            <ng-content></ng-content>
+        </div>
+        <div (click)="toggle()" class="overlay"></div>
+    </ng-container>
