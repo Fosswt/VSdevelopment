@@ -1,4 +1,4 @@
-function palindromeSolver(string){
+function isPalindrome(string){
     let solve = ""
     for(let i = string.length - 1; i >= 0; i --){
         solve += string[i]
@@ -11,6 +11,6 @@ function palindromeSolver(string){
         console.log("FALSE ❌, it is not a palindrome!")
     }
 }
-palindromeSolver('arara')
-palindromeSolver("00100")
-palindromeSolver("vsiniciusv")
+isPalindrome('arara')
+isPalindrome("00100")
+isPalindrome("vsiniciusv")

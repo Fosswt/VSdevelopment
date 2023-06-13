@@ -1,0 +1,28 @@
+
+table, th, td{
+    
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    
+    margin: auto;
+    border-collapse: collapse;
+    padding: 15px;
+    border-color: rgba(0, 0, 0, 0.322);   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+table#ltable{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width: 90%;
+}
+#table{
+    margin: 50px 0px;
+}
+h1{
+    margin: 2% 0px 1.5% 0px;
+    text-align: center;
+}
+h1:hover{
+    color: rgb(3, 104, 255);
+    cursor: pointer;
+}
