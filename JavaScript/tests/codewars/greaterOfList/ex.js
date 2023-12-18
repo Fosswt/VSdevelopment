@@ -15,7 +15,7 @@ function findSmaller(array){
             smaller = array[pos]
         }
     }
-    console.log(`The greater element in the array is: ${smaller}`)
+    console.log(`The smaller element in the array is: ${smaller}`)
 }
 findGreater(array)
 findSmaller(array)
